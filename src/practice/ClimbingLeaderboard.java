@@ -21,9 +21,7 @@ public class ClimbingLeaderboard {
         int result[] = climbingLeaderboard(scores, alice);
         System.out.println(Arrays.toString(result));
 
-
     }
-
 
     static int[] climbingLeaderboard(int[] scores, int[] alice) {
         int n = scores.length;
@@ -58,7 +56,25 @@ public class ClimbingLeaderboard {
 
     }
 
-    private static int binarySearch(int[] a, int key) {
+    public static int binarySearch(int[] scores, int a) {
+        int left = 0;
+        int right = scores.length - 1;
+
+        while (left <= right) {
+            int m = (left + right) / 2;
+            if (scores[m] == a) {
+                return m;
+            } else if (scores[m] < a) {
+                right = m - 1;
+            } else {
+                left = m + 1;
+            }
+        }
+
+        return left;
+    }
+
+    private static int binarySearch2(int[] a, int key) {
 
         int lo = 0;
         int hi = a.length - 1;
