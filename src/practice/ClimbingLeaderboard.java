@@ -13,10 +13,12 @@ public class ClimbingLeaderboard {
         scores[3] = 80;
         scores[4] = 70;
 
-        int [] alice = new int[3];
+        int [] alice = new int[4];
         alice[0] = 5;
-        alice[1] = 95;
-        alice[2] = 120;
+        alice[1] = 75;
+        alice[2] = 95;
+        alice[3] = 120;
+
 
         int result[] = climbingLeaderboard(scores, alice);
         System.out.println(Arrays.toString(result));
