@@ -45,7 +45,7 @@ public class AppendAndDelete {
 
         //when k >= operationsNeeded
         if (k >= s.length() + t.length()) {
-            return "Yes"; // always can delete all character of S and append all character of T
+            return "Yes"; // always can delete all character of S and append all character of T.
         }
 
         if ((k - operationsNeeded) % 2 == 0) {
